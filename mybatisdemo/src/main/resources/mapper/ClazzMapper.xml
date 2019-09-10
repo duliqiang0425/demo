@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dlq.mybatisdemo.dao.ClazzMapper">
+    <resultMap id="ClazzResultMap" type="com.dlq.mybatisdemo.model.Class">
+        <id column="CID" jdbcType="INTEGER" property="cid"/>
+        <result column="CLAZZ_NAME" jdbcType="VARCHAR" property="clazzname"/>
+        <result column="PEOPLE_NUM" jdbcType="VARCHAR" property="peopleNum"/>
+        <collection property="clazzlist" select="com.dlq.mybatisdemo.dao.StudentMapper.selectByClazz" column="CLAZZ_NAME">
+            <result column="sid" jdbcType="INTEGER" property="sid" />
+            <result column="Number_Code" jdbcType="VARCHAR" property="numbercode" />
+            <result column="Stu_Name" jdbcType="VARCHAR" property="stuname" />
+            <result column="Stu_Sex" jdbcType="VARCHAR" property="stusex" />
+            <result column="Stu_Age" jdbcType="INTEGER" property="stuage" />
+            <result column="Clazz_Name" jdbcType="VARCHAR" property="clazzname" />
+            <result column="Project" jdbcType="VARCHAR" property="project" />
+        </collection>
+    </resultMap>
+
+    <select id="getclass" parameterType="java.lang.String" resultMap="ClazzResultMap">
+        SELECT CLAZZ_NAME,PEOPLE_NUM FROM clazz WHERE CLAZZ_NAME=#{clazzname}
+    </select>
+
+</mapper>

@@ -1,0 +1,292 @@
+2019-09-09 10:37:54.570 [main] INFO  com.dlq.mybatisdemo.MybatisdemoApplication:50 - Starting MybatisdemoApplication on ncitxa4-PC with PID 4028 (C:\Users\ncitxa4\Desktop\excellent_project\mybatisdemo\target\classes started by ncitxa4 in C:\Users\ncitxa4\Desktop\excellent_project\mybatisdemo)
+2019-09-09 10:37:54.584 [main] INFO  com.dlq.mybatisdemo.MybatisdemoApplication:647 - No active profile set, falling back to default profiles: default
+2019-09-09 10:37:55.497 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:244 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-09-09 10:37:55.500 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:126 - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-09-09 10:37:55.526 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:182 - Finished Spring Data repository scanning in 14ms. Found 0 repository interfaces.
+2019-09-09 10:37:55.795 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:330 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$319d2e5a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-09-09 10:37:57.006 [main] ERROR org.apache.catalina.core.AprLifecycleListener:173 - An incompatible version [1.1.29] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-09-09 10:37:57.131 [main] ERROR org.apache.catalina.core.AprLifecycleListener:173 - An incompatible version [1.1.29] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-09-09 10:37:57.187 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer:90 - Tomcat initialized with port(s): 8080 (http)
+2019-09-09 10:37:57.198 [main] ERROR org.apache.catalina.core.AprLifecycleListener:173 - An incompatible version [1.1.29] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-09-09 10:37:57.200 [main] INFO  org.apache.coyote.http11.Http11NioProtocol:173 - Initializing ProtocolHandler ["http-nio-8080"]
+2019-09-09 10:37:57.207 [main] INFO  org.apache.catalina.core.StandardService:173 - Starting service [Tomcat]
+2019-09-09 10:37:57.208 [main] INFO  org.apache.catalina.core.StandardEngine:173 - Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-09-09 10:37:57.283 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]:173 - Initializing Spring embedded WebApplicationContext
+2019-09-09 10:37:57.283 [main] INFO  org.springframework.web.context.ContextLoader:284 - Root WebApplicationContext: initialization completed in 2654 ms
+2019-09-09 10:37:57.367 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure:56 - Init DruidDataSource
+2019-09-09 10:37:57.463 [main] INFO  com.alibaba.druid.pool.DruidDataSource:930 - {dataSource-1} inited
+2019-09-09 10:37:58.359 [main] INFO  com.dlq.mybatisdemo.config.RedisConfig:35 - jedispool开启成功
+2019-09-09 10:37:58.361 [main] INFO  com.dlq.mybatisdemo.config.RedisConfig:36 - redis地址为127.0.0.1:6379
+2019-09-09 10:37:58.772 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:171 - Initializing ExecutorService 'applicationTaskExecutor'
+2019-09-09 10:38:00.476 [main] INFO  org.apache.coyote.http11.Http11NioProtocol:173 - Starting ProtocolHandler ["http-nio-8080"]
+2019-09-09 10:38:00.497 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer:202 - Tomcat started on port(s): 8080 (http) with context path ''
+2019-09-09 10:38:00.500 [main] INFO  com.dlq.mybatisdemo.MybatisdemoApplication:59 - Started MybatisdemoApplication in 7.118 seconds (JVM running for 8.254)
+2019-09-09 10:40:47.171 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-09-09 10:40:47.171 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet:524 - Initializing Servlet 'dispatcherServlet'
+2019-09-09 10:40:47.221 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet:546 - Completed initialization in 49 ms
+2019-09-09 10:40:47.449 [http-nio-8080-exec-1] INFO  com.dlq.mybatisdemo.controller.StudentController:28 - 0:0:0:0:0:0:0:1:获取了学生列表信息
+2019-09-09 10:40:49.429 [http-nio-8080-exec-1] ERROR com.dlq.mybatisdemo.utils.RedisUtil:240 - Could not get a resource from the pool
+2019-09-09 10:40:50.441 [http-nio-8080-exec-1] ERROR com.dlq.mybatisdemo.utils.RedisUtil:47 - Could not get a resource from the pool
+2019-09-09 10:40:50.763 [http-nio-8080-exec-1] ERROR o.a.c.c.C.[.[localhost].[/].[dispatcherServlet]:175 - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+java.lang.NullPointerException: null
+	at com.github.pagehelper.PageSerializable.<init>(PageSerializable.java:48)
+	at com.github.pagehelper.PageInfo.<init>(PageInfo.java:101)
+	at com.github.pagehelper.PageInfo.<init>(PageInfo.java:91)
+	at com.dlq.mybatisdemo.service.impl.StudentServiceImpl.selectAll(StudentServiceImpl.java:60)
+	at com.dlq.mybatisdemo.controller.StudentController.getList(StudentController.java:29)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:892)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1039)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:897)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:123)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2019-09-09 10:42:49.316 [main] INFO  com.dlq.mybatisdemo.MybatisdemoApplication:50 - Starting MybatisdemoApplication on ncitxa4-PC with PID 7120 (C:\Users\ncitxa4\Desktop\excellent_project\mybatisdemo\target\classes started by ncitxa4 in C:\Users\ncitxa4\Desktop\excellent_project\mybatisdemo)
+2019-09-09 10:42:49.320 [main] INFO  com.dlq.mybatisdemo.MybatisdemoApplication:647 - No active profile set, falling back to default profiles: default
+2019-09-09 10:42:50.116 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:244 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-09-09 10:42:50.119 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:126 - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-09-09 10:42:50.148 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:182 - Finished Spring Data repository scanning in 17ms. Found 0 repository interfaces.
+2019-09-09 10:42:50.436 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:330 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$c3f316e9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-09-09 10:42:50.478 [main] ERROR org.apache.catalina.core.AprLifecycleListener:173 - An incompatible version [1.1.29] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-09-09 10:42:50.649 [main] ERROR org.apache.catalina.core.AprLifecycleListener:173 - An incompatible version [1.1.29] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-09-09 10:42:50.730 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer:90 - Tomcat initialized with port(s): 8080 (http)
+2019-09-09 10:42:50.744 [main] ERROR org.apache.catalina.core.AprLifecycleListener:173 - An incompatible version [1.1.29] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-09-09 10:42:50.745 [main] INFO  org.apache.coyote.http11.Http11NioProtocol:173 - Initializing ProtocolHandler ["http-nio-8080"]
+2019-09-09 10:42:50.754 [main] INFO  org.apache.catalina.core.StandardService:173 - Starting service [Tomcat]
+2019-09-09 10:42:50.754 [main] INFO  org.apache.catalina.core.StandardEngine:173 - Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-09-09 10:42:50.845 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]:173 - Initializing Spring embedded WebApplicationContext
+2019-09-09 10:42:50.846 [main] INFO  org.springframework.web.context.ContextLoader:284 - Root WebApplicationContext: initialization completed in 1358 ms
+2019-09-09 10:42:50.957 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure:56 - Init DruidDataSource
+2019-09-09 10:42:51.072 [main] INFO  com.alibaba.druid.pool.DruidDataSource:930 - {dataSource-1} inited
+2019-09-09 10:42:51.496 [main] INFO  com.dlq.mybatisdemo.config.RedisConfig:35 - jedispool开启成功
+2019-09-09 10:42:51.497 [main] INFO  com.dlq.mybatisdemo.config.RedisConfig:36 - redis地址为127.0.0.1:6379
+2019-09-09 10:42:51.721 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:171 - Initializing ExecutorService 'applicationTaskExecutor'
+2019-09-09 10:42:52.107 [main] INFO  org.apache.coyote.http11.Http11NioProtocol:173 - Starting ProtocolHandler ["http-nio-8080"]
+2019-09-09 10:42:52.129 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer:202 - Tomcat started on port(s): 8080 (http) with context path ''
+2019-09-09 10:42:52.132 [main] INFO  com.dlq.mybatisdemo.MybatisdemoApplication:59 - Started MybatisdemoApplication in 3.592 seconds (JVM running for 4.527)
+2019-09-09 10:43:51.272 [http-nio-8080-exec-2] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-09-09 10:43:51.273 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet:524 - Initializing Servlet 'dispatcherServlet'
+2019-09-09 10:43:51.280 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet:546 - Completed initialization in 7 ms
+2019-09-09 10:43:51.310 [http-nio-8080-exec-2] INFO  com.dlq.mybatisdemo.controller.StudentController:28 - 0:0:0:0:0:0:0:1:获取了学生列表信息
+2019-09-09 10:43:52.319 [http-nio-8080-exec-2] ERROR com.dlq.mybatisdemo.utils.RedisUtil:240 - Could not get a resource from the pool
+2019-09-09 10:43:53.052 [http-nio-8080-exec-2] DEBUG c.d.mybatisdemo.dao.StudentMapper.selectAll_COUNT:143 - ==>  Preparing: SELECT count(0) FROM student 
+2019-09-09 10:43:53.099 [http-nio-8080-exec-2] DEBUG c.d.mybatisdemo.dao.StudentMapper.selectAll_COUNT:143 - ==> Parameters: 
+2019-09-09 10:43:53.133 [http-nio-8080-exec-2] DEBUG c.d.mybatisdemo.dao.StudentMapper.selectAll_COUNT:143 - <==      Total: 1
+2019-09-09 10:43:53.137 [http-nio-8080-exec-2] DEBUG com.dlq.mybatisdemo.dao.StudentMapper.selectAll:143 - ==>  Preparing: select * from student LIMIT ?, ? 
+2019-09-09 10:43:53.140 [http-nio-8080-exec-2] DEBUG com.dlq.mybatisdemo.dao.StudentMapper.selectAll:143 - ==> Parameters: 3(Integer), 3(Integer)
+2019-09-09 10:43:53.148 [http-nio-8080-exec-2] DEBUG com.dlq.mybatisdemo.dao.StudentMapper.selectAll:143 - <==      Total: 3
+2019-09-09 10:43:54.174 [http-nio-8080-exec-2] ERROR com.dlq.mybatisdemo.utils.RedisUtil:102 - Could not get a resource from the pool
+2019-09-09 11:02:18.369 [http-nio-8080-exec-4] INFO  com.dlq.mybatisdemo.controller.StudentController:28 - 0:0:0:0:0:0:0:1:获取了学生列表信息
+2019-09-09 11:02:19.370 [http-nio-8080-exec-4] ERROR com.dlq.mybatisdemo.utils.RedisUtil:240 - Could not get a resource from the pool
+2019-09-09 11:02:19.399 [http-nio-8080-exec-4] DEBUG c.d.mybatisdemo.dao.StudentMapper.selectAll_COUNT:143 - ==>  Preparing: SELECT count(0) FROM student 
+2019-09-09 11:02:19.401 [http-nio-8080-exec-4] DEBUG c.d.mybatisdemo.dao.StudentMapper.selectAll_COUNT:143 - ==> Parameters: 
+2019-09-09 11:02:19.404 [http-nio-8080-exec-4] DEBUG c.d.mybatisdemo.dao.StudentMapper.selectAll_COUNT:143 - <==      Total: 1
+2019-09-09 11:02:19.407 [http-nio-8080-exec-4] DEBUG com.dlq.mybatisdemo.dao.StudentMapper.selectAll:143 - ==>  Preparing: select * from student LIMIT ?, ? 
+2019-09-09 11:02:19.408 [http-nio-8080-exec-4] DEBUG com.dlq.mybatisdemo.dao.StudentMapper.selectAll:143 - ==> Parameters: 3(Integer), 3(Integer)
+2019-09-09 11:02:19.413 [http-nio-8080-exec-4] DEBUG com.dlq.mybatisdemo.dao.StudentMapper.selectAll:143 - <==      Total: 3
+2019-09-09 11:02:20.415 [http-nio-8080-exec-4] ERROR com.dlq.mybatisdemo.utils.RedisUtil:102 - Could not get a resource from the pool
+2019-09-09 11:05:25.620 [background-preinit] DEBUG o.h.v.m.ResourceBundleMessageInterpolator:89 - Loaded expression factory via original TCCL
+2019-09-09 11:05:25.766 [main] INFO  com.dlq.mybatisdemo.MybatisdemoApplication:50 - Starting MybatisdemoApplication on ncitxa4-PC with PID 7304 (C:\Users\ncitxa4\Desktop\excellent_project\mybatisdemo\target\classes started by ncitxa4 in C:\Users\ncitxa4\Desktop\excellent_project\mybatisdemo)
+2019-09-09 11:05:25.767 [main] INFO  com.dlq.mybatisdemo.MybatisdemoApplication:647 - No active profile set, falling back to default profiles: default
+2019-09-09 11:05:26.429 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:244 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-09-09 11:05:26.432 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:126 - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-09-09 11:05:26.462 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:182 - Finished Spring Data repository scanning in 17ms. Found 0 repository interfaces.
+2019-09-09 11:05:26.782 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:330 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$faf1a318] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-09-09 11:05:26.810 [main] ERROR org.apache.catalina.core.AprLifecycleListener:173 - An incompatible version [1.1.29] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-09-09 11:05:26.932 [main] ERROR org.apache.catalina.core.AprLifecycleListener:173 - An incompatible version [1.1.29] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-09-09 11:05:27.006 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer:90 - Tomcat initialized with port(s): 8080 (http)
+2019-09-09 11:05:27.017 [main] ERROR org.apache.catalina.core.AprLifecycleListener:173 - An incompatible version [1.1.29] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-09-09 11:05:27.017 [main] INFO  org.apache.coyote.http11.Http11NioProtocol:173 - Initializing ProtocolHandler ["http-nio-8080"]
+2019-09-09 11:05:27.025 [main] INFO  org.apache.catalina.core.StandardService:173 - Starting service [Tomcat]
+2019-09-09 11:05:27.026 [main] INFO  org.apache.catalina.core.StandardEngine:173 - Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-09-09 11:05:27.109 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]:173 - Initializing Spring embedded WebApplicationContext
+2019-09-09 11:05:27.109 [main] INFO  org.springframework.web.context.ContextLoader:284 - Root WebApplicationContext: initialization completed in 1271 ms
+2019-09-09 11:05:27.203 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure:56 - Init DruidDataSource
+2019-09-09 11:05:27.310 [main] INFO  com.alibaba.druid.pool.DruidDataSource:930 - {dataSource-1} inited
+2019-09-09 11:05:27.698 [main] INFO  com.dlq.mybatisdemo.config.RedisConfig:35 - jedispool开启成功
+2019-09-09 11:05:27.698 [main] INFO  com.dlq.mybatisdemo.config.RedisConfig:36 - redis地址为127.0.0.1:6379
+2019-09-09 11:05:27.870 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:171 - Initializing ExecutorService 'applicationTaskExecutor'
+2019-09-09 11:05:28.196 [main] INFO  org.apache.coyote.http11.Http11NioProtocol:173 - Starting ProtocolHandler ["http-nio-8080"]
+2019-09-09 11:05:28.217 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer:202 - Tomcat started on port(s): 8080 (http) with context path ''
+2019-09-09 11:05:28.220 [main] INFO  com.dlq.mybatisdemo.MybatisdemoApplication:59 - Started MybatisdemoApplication in 3.298 seconds (JVM running for 4.042)
+2019-09-09 11:06:05.279 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-09-09 11:06:05.280 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet:524 - Initializing Servlet 'dispatcherServlet'
+2019-09-09 11:06:05.288 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet:546 - Completed initialization in 7 ms
+2019-09-09 11:06:05.321 [http-nio-8080-exec-1] INFO  com.dlq.mybatisdemo.controller.StudentController:28 - 192.168.3.234:获取了学生列表信息
+2019-09-09 11:06:06.352 [http-nio-8080-exec-1] ERROR com.dlq.mybatisdemo.utils.RedisUtil:240 - Could not get a resource from the pool
+2019-09-09 11:06:06.529 [http-nio-8080-exec-1] DEBUG c.d.mybatisdemo.dao.StudentMapper.selectAll_COUNT:143 - ==>  Preparing: SELECT count(0) FROM student 
+2019-09-09 11:06:06.550 [http-nio-8080-exec-1] DEBUG c.d.mybatisdemo.dao.StudentMapper.selectAll_COUNT:143 - ==> Parameters: 
+2019-09-09 11:06:06.573 [http-nio-8080-exec-1] DEBUG c.d.mybatisdemo.dao.StudentMapper.selectAll_COUNT:143 - <==      Total: 1
+2019-09-09 11:06:06.577 [http-nio-8080-exec-1] DEBUG com.dlq.mybatisdemo.dao.StudentMapper.selectAll:143 - ==>  Preparing: select * from student LIMIT ?, ? 
+2019-09-09 11:06:06.578 [http-nio-8080-exec-1] DEBUG com.dlq.mybatisdemo.dao.StudentMapper.selectAll:143 - ==> Parameters: 3(Integer), 3(Integer)
+2019-09-09 11:06:06.582 [http-nio-8080-exec-1] DEBUG com.dlq.mybatisdemo.dao.StudentMapper.selectAll:143 - <==      Total: 3
+2019-09-09 11:06:07.599 [http-nio-8080-exec-1] ERROR com.dlq.mybatisdemo.utils.RedisUtil:102 - Could not get a resource from the pool
+2019-09-09 13:04:15.621 [main] INFO  com.dlq.mybatisdemo.MybatisdemoApplication:50 - Starting MybatisdemoApplication on ncitxa4-PC with PID 8864 (C:\Users\ncitxa4\Desktop\excellent_project\mybatisdemo\target\classes started by ncitxa4 in C:\Users\ncitxa4\Desktop\excellent_project\mybatisdemo)
+2019-09-09 13:04:15.626 [main] INFO  com.dlq.mybatisdemo.MybatisdemoApplication:647 - No active profile set, falling back to default profiles: default
+2019-09-09 13:04:16.231 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:244 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-09-09 13:04:16.234 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:126 - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-09-09 13:04:16.262 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:182 - Finished Spring Data repository scanning in 15ms. Found 0 repository interfaces.
+2019-09-09 13:04:16.514 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:330 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$92096e80] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-09-09 13:04:16.542 [main] ERROR org.apache.catalina.core.AprLifecycleListener:173 - An incompatible version [1.1.29] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-09-09 13:04:16.676 [main] ERROR org.apache.catalina.core.AprLifecycleListener:173 - An incompatible version [1.1.29] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-09-09 13:04:16.750 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer:90 - Tomcat initialized with port(s): 8080 (http)
+2019-09-09 13:04:16.764 [main] ERROR org.apache.catalina.core.AprLifecycleListener:173 - An incompatible version [1.1.29] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-09-09 13:04:16.765 [main] INFO  org.apache.coyote.http11.Http11NioProtocol:173 - Initializing ProtocolHandler ["http-nio-8080"]
+2019-09-09 13:04:16.774 [main] INFO  org.apache.catalina.core.StandardService:173 - Starting service [Tomcat]
+2019-09-09 13:04:16.775 [main] INFO  org.apache.catalina.core.StandardEngine:173 - Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-09-09 13:04:16.874 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]:173 - Initializing Spring embedded WebApplicationContext
+2019-09-09 13:04:16.875 [main] INFO  org.springframework.web.context.ContextLoader:284 - Root WebApplicationContext: initialization completed in 1195 ms
+2019-09-09 13:04:16.985 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure:56 - Init DruidDataSource
+2019-09-09 13:04:17.089 [main] INFO  com.alibaba.druid.pool.DruidDataSource:930 - {dataSource-1} inited
+2019-09-09 13:04:17.476 [main] INFO  com.dlq.mybatisdemo.config.RedisConfig:35 - jedispool开启成功
+2019-09-09 13:04:17.477 [main] INFO  com.dlq.mybatisdemo.config.RedisConfig:36 - redis地址为127.0.0.1:6379
+2019-09-09 13:04:17.632 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:171 - Initializing ExecutorService 'applicationTaskExecutor'
+2019-09-09 13:04:17.955 [main] INFO  org.apache.coyote.http11.Http11NioProtocol:173 - Starting ProtocolHandler ["http-nio-8080"]
+2019-09-09 13:04:17.973 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer:202 - Tomcat started on port(s): 8080 (http) with context path ''
+2019-09-09 13:04:17.977 [main] INFO  com.dlq.mybatisdemo.MybatisdemoApplication:59 - Started MybatisdemoApplication in 3.16 seconds (JVM running for 4.064)
+2019-09-09 13:04:23.656 [http-nio-8080-exec-2] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-09-09 13:04:23.657 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet:524 - Initializing Servlet 'dispatcherServlet'
+2019-09-09 13:04:23.663 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet:546 - Completed initialization in 5 ms
+2019-09-09 13:04:23.692 [http-nio-8080-exec-2] INFO  com.dlq.mybatisdemo.controller.StudentController:28 - 192.168.3.234:获取了学生列表信息
+2019-09-09 13:04:24.696 [http-nio-8080-exec-2] ERROR com.dlq.mybatisdemo.utils.RedisUtil:240 - Could not get a resource from the pool
+2019-09-09 13:04:25.701 [http-nio-8080-exec-2] ERROR com.dlq.mybatisdemo.utils.RedisUtil:47 - Could not get a resource from the pool
+2019-09-09 13:04:25.736 [http-nio-8080-exec-2] ERROR o.a.c.c.C.[.[localhost].[/].[dispatcherServlet]:175 - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+java.lang.NullPointerException: null
+	at com.github.pagehelper.PageSerializable.<init>(PageSerializable.java:48)
+	at com.github.pagehelper.PageInfo.<init>(PageInfo.java:101)
+	at com.github.pagehelper.PageInfo.<init>(PageInfo.java:91)
+	at com.dlq.mybatisdemo.service.impl.StudentServiceImpl.selectAll(StudentServiceImpl.java:60)
+	at com.dlq.mybatisdemo.controller.StudentController.getList(StudentController.java:29)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:892)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1039)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:897)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:123)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2019-09-09 13:42:28.813 [main] INFO  com.dlq.mybatisdemo.MybatisdemoApplication:50 - Starting MybatisdemoApplication on ncitxa4-PC with PID 6456 (C:\Users\ncitxa4\Desktop\excellent_project\mybatisdemo\target\classes started by ncitxa4 in C:\Users\ncitxa4\Desktop\excellent_project\mybatisdemo)
+2019-09-09 13:42:28.830 [main] INFO  com.dlq.mybatisdemo.MybatisdemoApplication:647 - No active profile set, falling back to default profiles: default
+2019-09-09 13:42:29.525 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:244 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-09-09 13:42:29.530 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:126 - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-09-09 13:42:29.558 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:182 - Finished Spring Data repository scanning in 15ms. Found 0 repository interfaces.
+2019-09-09 13:42:29.817 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:330 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$f70b239b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-09-09 13:42:29.846 [main] ERROR org.apache.catalina.core.AprLifecycleListener:173 - An incompatible version [1.1.29] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-09-09 13:42:29.967 [main] ERROR org.apache.catalina.core.AprLifecycleListener:173 - An incompatible version [1.1.29] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-09-09 13:42:30.039 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer:90 - Tomcat initialized with port(s): 8080 (http)
+2019-09-09 13:42:30.055 [main] ERROR org.apache.catalina.core.AprLifecycleListener:173 - An incompatible version [1.1.29] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-09-09 13:42:30.056 [main] INFO  org.apache.coyote.http11.Http11NioProtocol:173 - Initializing ProtocolHandler ["http-nio-8080"]
+2019-09-09 13:42:30.069 [main] INFO  org.apache.catalina.core.StandardService:173 - Starting service [Tomcat]
+2019-09-09 13:42:30.069 [main] INFO  org.apache.catalina.core.StandardEngine:173 - Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-09-09 13:42:30.166 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]:173 - Initializing Spring embedded WebApplicationContext
+2019-09-09 13:42:30.166 [main] INFO  org.springframework.web.context.ContextLoader:284 - Root WebApplicationContext: initialization completed in 1269 ms
+2019-09-09 13:42:30.258 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure:56 - Init DruidDataSource
+2019-09-09 13:42:30.366 [main] INFO  com.alibaba.druid.pool.DruidDataSource:930 - {dataSource-1} inited
+2019-09-09 13:42:30.767 [main] INFO  com.dlq.mybatisdemo.config.RedisConfig:35 - jedispool开启成功
+2019-09-09 13:42:30.767 [main] INFO  com.dlq.mybatisdemo.config.RedisConfig:36 - redis地址为127.0.0.1:6379
+2019-09-09 13:42:30.926 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:171 - Initializing ExecutorService 'applicationTaskExecutor'
+2019-09-09 13:42:31.243 [main] INFO  org.apache.coyote.http11.Http11NioProtocol:173 - Starting ProtocolHandler ["http-nio-8080"]
+2019-09-09 13:42:31.262 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer:202 - Tomcat started on port(s): 8080 (http) with context path ''
+2019-09-09 13:42:31.267 [main] INFO  com.dlq.mybatisdemo.MybatisdemoApplication:59 - Started MybatisdemoApplication in 3.119 seconds (JVM running for 3.961)
+2019-09-09 13:43:10.348 [http-nio-8080-exec-2] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-09-09 13:43:10.348 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet:524 - Initializing Servlet 'dispatcherServlet'
+2019-09-09 13:43:10.355 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet:546 - Completed initialization in 7 ms

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dlq.mybatisdemo.dao.StudentMapper">
+    <resultMap id="BaseResultMap" type="com.dlq.mybatisdemo.model.Student">
+        <result column="sid" jdbcType="INTEGER" property="sid" />
+        <result column="Number_Code" jdbcType="VARCHAR" property="numbercode" />
+        <result column="Stu_Name" jdbcType="VARCHAR" property="stuname" />
+        <result column="Stu_Sex" jdbcType="VARCHAR" property="stusex" />
+        <result column="Stu_Age" jdbcType="INTEGER" property="stuage" />
+        <result column="Clazz_Name" jdbcType="VARCHAR" property="clazzname" />
+        <result column="Project" jdbcType="VARCHAR" property="project" />
+        <result column="Start_Time" jdbcType="TIMESTAMP" property="starttime" />
+        <result column="Updata_Time" jdbcType="TIMESTAMP" property="updatetime" />
+    </resultMap>
+
+    <sql id="AllFind">Number_Code,Stu_Name,Stu_Sex,Stu_Age,Clazz_Name,Project,Start_Time,Updata_Time</sql>
+
+    <insert id="insert" parameterType="com.dlq.mybatisdemo.model.Student">
+        <selectKey keyProperty="id" order="BEFORE" resultType="java.lang.Integer">
+            SELECT LAST_INSERT_ID()
+        </selectKey>
+        insert into student (Number_Code, Stu_Name,
+        Stu_Sex, Stu_Age,Clazz_Name,Project)
+        values (#{numbercode,jdbcType=VARCHAR}, #{stuname,jdbcType=VARCHAR},
+        #{stusex,jdbcType=VARCHAR}, #{stuage,jdbcType=INTEGER},#{clazzname,jdbcType=VARCHAR},#{project,jdbcType=VARCHAR})
+    </insert>
+
+    <update id="update">
+        update student set Stu_Name = #{stuname},Stu_Sex = #{stusex},Stu_Age= #{stuage}
+        where Number_Code = #{numbercode}
+    </update>
+
+    <select id="selectAll" parameterType="java.lang.String" resultMap="BaseResultMap">
+        select * from student
+        <where>
+            <if test="numbercode != null and numbercode !=''">
+              AND  Number_Code LIKE concat('%',#{numbercode},'%')
+            </if>
+        </where>
+    </select>
+
+    <select id="selectByClazz" parameterType="java.lang.String" resultMap="BaseResultMap">
+        SELECT * FROM student WHERE Clazz_Name=#{clazzname}
+    </select>
+    <!-- in的使用 -->
+    <select id="selectByClazzList" resultMap="BaseResultMap">
+        SELECT 
+        <include refid="AllFind"/>
+        FROM student WHERE Clazz_Name IN
+        <foreach collection="list" index="index" item="clazzList" open="(" close=")" separator=",">
+            #{clazzList}
+        </foreach>
+    </select>
+
+    <!-- 时间戳的用法 -->
+    <select id="selectByStartTime" parameterType="java.lang.String" resultMap="BaseResultMap">
+          SELECT
+            <include refid="AllFind"/>
+          FROM student
+          <where>
+              <if test="starttime!=null and starttime!=''">
+                  AND Start_Time &gt;= #{starttime}
+              </if>
+          </where>
+    </select>
+    <update id="updateAge">
+         update student set Stu_Age = #{stuage}
+        where Number_Code = #{numbercode}
+    </update>
+
+
+
+    <select id="count" resultType="java.lang.Integer">
+        SELECT count(*) FROM student
+    </select>
+
+    <select id="getStudent" parameterType="java.lang.String" resultMap="BaseResultMap">
+        select * from student where Number_Code = #{numberCode}
+    </select>
+
+    <select id="delete">
+        delete from student where Number_Code = #{numberCode}
+    </select>
+
+    <insert id="insertStudentList">
+        INSERT INTO student(
+        <include refid="AllFind"/>
+        )VALUES 
+        <foreach collection="studentList" item="student" separator=",">
+            (
+            #{student.numbercode},#{student.stuname},#{student.stusex}
+            ,#{student.stuage},#{student.clazzname},#{student.project}
+            ,#{student.starttime},#{student.updatetime}
+            )
+        </foreach>
+    </insert>
+
+</mapper>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dlq.mybatisdemo.dao.TeacherMapper">
+    <resultMap id="TeacherResult" type="com.dlq.mybatisdemo.model.Teacher">
+        <id column="TID" jdbcType="INTEGER" property="tid"/>
+        <result column="TEA_NAME" jdbcType="VARCHAR" property="teaname"/>
+        <result column="TEA_AGE" jdbcType="VARCHAR" property="teaage"/>
+        <result column="CLAZZ_NAME" jdbcType="VARCHAR" property="clazzname"/>
+        <result column="PROJECT" jdbcType="VARCHAR" property="project"/>
+        <collection property="studentList" ofType="com.dlq.mybatisdemo.model.Student">
+            <result column="sid" jdbcType="INTEGER" property="sid" />
+            <result column="Number_Code" jdbcType="VARCHAR" property="numbercode" />
+            <result column="Stu_Name" jdbcType="VARCHAR" property="stuname" />
+            <result column="Stu_Sex" jdbcType="VARCHAR" property="stusex" />
+            <result column="Stu_Age" jdbcType="INTEGER" property="stuage" />
+            <result column="Clazz_Name" jdbcType="VARCHAR" property="clazzname" />
+            <result column="Project" jdbcType="VARCHAR" property="project" />
+        </collection>
+    </resultMap>
+
+    <resultMap id="TeacherStudentResult" type="com.dlq.mybatisdemo.model.Teacher" extends="TeacherClazzresult">
+        <collection property="studentList" ofType="com.dlq.mybatisdemo.model.Student">
+            <result column="sid" jdbcType="INTEGER" property="sid" />
+            <result column="Number_Code" jdbcType="VARCHAR" property="numbercode" />
+            <result column="Stu_Name" jdbcType="VARCHAR" property="stuname" />
+            <result column="Stu_Sex" jdbcType="VARCHAR" property="stusex" />
+            <result column="Stu_Age" jdbcType="INTEGER" property="stuage" />
+            <result column="Clazz_Name" jdbcType="VARCHAR" property="clazzname" />
+            <result column="Project" jdbcType="VARCHAR" property="project" />
+        </collection>
+    </resultMap>
+    <resultMap id="TeacherClazzresult" type="com.dlq.mybatisdemo.model.Teacher">
+        <id column="TID" jdbcType="INTEGER" property="tid"/>
+        <result column="TEA_NAME" jdbcType="VARCHAR" property="teaname"/>
+        <result column="TEA_AGE" jdbcType="VARCHAR" property="teaage"/>
+        <result column="CLAZZ_NAME" jdbcType="VARCHAR" property="clazzname"/>
+        <result column="PROJECT" jdbcType="VARCHAR" property="project"/>
+        <association property="clazz" javaType="com.dlq.mybatisdemo.model.Class">
+            <id column="CID" jdbcType="INTEGER" property="cid"/>
+            <result column="CLAZZ_NAME" jdbcType="VARCHAR" property="clazzname"/>
+            <result column="PEOPLE_NUM" jdbcType="VARCHAR" property="peopleNum"/>
+        </association>
+    </resultMap>
+
+    <select id="getTeacher" parameterType="java.lang.String" resultMap="TeacherResult">
+        SELECT * FROM TEACHER t,student s
+        WHERE t.PROJECT = s.PROJECT AND t.PROJECT = #{project}
+    </select>
+
+    <select id="getTeacherStudnetClazz" parameterType="java.lang.String" resultMap="TeacherStudentResult">
+        SELECT * FROM  TEACHER t,student s,clazz c
+        WHERE t.CLAZZ_NAME = c.CLAZZ_NAME AND  t.PROJECT = s.PROJECT AND t.PROJECT = #{project}
+    </select>
+</mapper>
